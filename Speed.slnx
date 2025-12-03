@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Speed.Benchmarking/Speed.Benchmarking.csproj" Id="dfa626a9-e511-470d-ae3a-7d6fecd00703" />
+  <Project Path="Speed.Sandbox.Host/Speed.Sandbox.Host.csproj" Id="940ef495-1be8-44c1-b6d4-200d62b3095c" />
+  <Project Path="Speed.SimpleSimulator/Speed.SimpleSimulator.csproj" Id="3024f467-d23b-427d-9eae-f0f555305b4d" />
+</Solution>
