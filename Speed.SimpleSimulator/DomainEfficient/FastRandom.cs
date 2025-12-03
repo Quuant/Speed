@@ -17,7 +17,7 @@ namespace Speed.SimpleSimulator.DomainEfficient
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public double NextDouble()
         {
-            // Xorshift algorithm (3 instructions)
+            // Xorshift algorithm
             uint x = _state;
             x ^= x << 13;
             x ^= x >> 17;
