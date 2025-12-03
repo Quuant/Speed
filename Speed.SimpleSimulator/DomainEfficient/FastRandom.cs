@@ -10,7 +10,8 @@ namespace Speed.SimpleSimulator.DomainEfficient
         {
             // State must be non-zero
             _state = (uint)seed;
-            if (_state == 0) _state = 1;
+            if (_state == 0) 
+                _state = 1;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
