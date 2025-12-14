@@ -1,8 +1,8 @@
 ﻿namespace Speed.SimpleSimulator.DomainEfficient
 {
-    internal ref struct GameStateEfficient
+    internal class GameStateEfficient
     {
-        public Span<int> SplineInputs;
+        public int[] SplineInputs;
 
         public int SplineInputUpperBound;
 
@@ -22,10 +22,10 @@
             if (LastSplineIndex == SplineInputs.Length)
                 LastSplineIndex = 0;
 
-            ref var val = ref SplineInputs[LastSplineIndex];
-            val++;
-            if (val == SplineInputUpperBound)
-                val = 0;
+            var val = SplineInputs[LastSplineIndex];
+            SplineInputs[LastSplineIndex] = val == SplineInputUpperBound - 1
+                ? 0 
+                : val++;
 
             CurrentNodeIndex += win + (loss * 2);
 
