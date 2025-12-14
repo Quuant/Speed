@@ -1,10 +1,13 @@
 ﻿using Autofac;
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Diagnosers;
 using BenchmarkDotNet.Running;
 using Speed.Benchmarking.Autofac;
 using Speed.SimpleSimulator.Domain;
 
 [MemoryDiagnoser]
+[HardwareCounters(HardwareCounter.CacheMisses, HardwareCounter.BranchMispredictions, HardwareCounter.InstructionRetired)]
+//[DisassemblyDiagnoser(printSource: true, exportHtml: true)]
 public class SimBenchmark
 {
     private Simulation _cachedSimulation;

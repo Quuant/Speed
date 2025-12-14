@@ -16,11 +16,9 @@
             double[] megaSplineArray,
             int[] nodeOffsets)
         {
-            Span<int> inputBuffer = stackalloc int[_splinesPerNode];
-
             var gameState = new GameStateEfficient
             {
-                SplineInputs = inputBuffer,
+                SplineInputs = new int[_splinesPerNode],
                 SplineInputUpperBound = _splineInputUpperBound,
                 Iteration = 0,
                 CurrentNodeIndex = 0,

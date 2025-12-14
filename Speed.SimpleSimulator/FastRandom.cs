@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace Speed.SimpleSimulator.DomainEfficient
+namespace Speed.SimpleSimulator
 {
     public struct FastRandom
     {
